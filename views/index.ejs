@@ -8,13 +8,47 @@
     <%- include('../partials/nav.ejs') %>
     
    
+
+    
    <div class="scrolling">
     <div id="scroll-container">
-        <% for (let i = 0; i < data.length; i++) {%>
-        <div id="scroll-text"> <%=data[i].name%> </div>
-        <% } %>
+        
+            
+        <div id="scroll-text"><% for (let i = 0; i < 10; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <% } %></div>
+        
       </div>
    </div>
+
+   <div class="scrolling2">
+    <div id="scroll-container2">
+        
+            
+        <div id="scroll-text"><% for (let i = 9; i < 17; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <% } %></div>
+        
+      </div>
+   </div>
+
+   <div class="scrolling2">
+    <div id="scroll-container3">
+        
+            
+        <div id="scroll-text"><% for (let i = 17; i < data.length; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <% } %></div>
+        
+      </div>
+   </div>
+    
+
+   
+   <!-- <marquee behavior="scroll" direction="up">
+   
+    <div>
+    
+    </div>  
+    
+   </marquee>
+   -->
+   
+
 
     <div class="show">
     <div class="d-flex flex-row justify-content-around align-self-stretch flex-wrap" >

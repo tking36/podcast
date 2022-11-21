@@ -78,17 +78,37 @@ body {
 
 .scrolling {
 margin-top: 100px;
+color: red;
 }
+
+.scrolling2 {
+    
+    color: red;
+    }
 
 #scroll-container {
     border: 3px solid black;
     border-radius: 5px;
     overflow: hidden;
+    border-bottom: none;
+  }
+
+  #scroll-container2 {
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  #scroll-container3 {
+    border: 3px solid black;
+    border-top: none;
+    border-radius: 5px;
+    overflow: hidden;
   }
   
   #scroll-text {
-    margin-bottom: 0;
-    color: red;
     /* animation properties */
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -122,7 +142,6 @@ margin-top: 100px;
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
     }
-
 }
 
 
