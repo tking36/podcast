@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <%- include('../partials/head.ejs') %>
+</head>
+<body class="container-fluid text-center bg-dark">
+    <%- include('../partials/nav.ejs') %>
+
+   
+    
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">Edit Podcast</h1>
+          <form class="lead form-group" action="/<%=data.id%>?_method=PUT" method="POST">`
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=data.name%>">
+              <small id="emailHelp" class="form-text text-muted">Enter name of Podcast</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Genre</label>
+              <input type="text" name="genre" class="form-control" id="exampleInputPassword1" value="<%=data.genre%>">
+              <small id="emailHelp" class="form-text text-muted">Enter genre of Podcast</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Hosts</label>
+                <input type="text" name="hosts" class="form-control" id="exampleInputPassword1" value="<%=data.hosts%>" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Release Date</label>
+                <input type="date" name="date" class="form-control" id="exampleInputPassword1" value="<%=data.date%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Description</label>
+                <input type="text" name="description" class="form-control" id="exampleInputPassword1" value="<%=data.description%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" name="img" class="form-control" id="exampleInputPassword1" value="<%=data.img%>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Preview</label>
+                <input type="text" name="preview" class="form-control" id="exampleInputPassword1" value="<%=data.preview%>">
+            </div>
+            <button  type="submit" class="btn btn-primary">Edit</button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+</html>
+
+<!-- <form class="lead form-group" action="/<%=data.id%>?_method=PUT" method="POST">
+    Name: <input type="text" name="name" value="<%=data.name%>"/>
+    Genre: <input type="text" name="genre" value="<%=data.genre%>"/>
+     Hosts: <input type="text" name="hosts" value="<%=data.hosts%>"/> 
+     Release Date:<input type="date" name="date" value="<%=data.date%>" />
+     Description: <input type="text" name="description" value="<%=data.description%>"/>
+     Image: <input type="text" name="img" value="<%=data.img%>"/>
+    <input class="btn btn-warning" type="submit" value="Edit Podcast"/>
+  </form> -->

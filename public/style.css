@@ -1,0 +1,138 @@
+/* .btn-warning {
+    margin-bottom: 10px !important;
+} */
+
+
+
+body {
+    /* background-color: black !important; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body {
+    background-image: url("https://img.freepik.com/premium-vector/podcast-seamless-vector-pattern-handdrawn-elements_318844-695.jpg?w=826");
+    background-size:cover;
+    
+    color: rgb(0, 0, 0);
+    
+}
+
+.card {
+    margin-bottom: 2em;
+    
+}
+
+.flex-wrap {
+    margin-top: 100px !important;
+}
+
+.b {
+    background-color: red;
+    padding: 5px;
+    opacity: 1;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 0, 0);
+    font-size: 1.6em;
+    white-space: none;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards,
+    blink .8s infinite;
+    color: white;
+}
+
+.bi {
+    color: white;
+}
+
+.typing {
+    display: inline-block;
+
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink {
+    from {border-color: transparent;}
+    to {border-color: rgb(255, 0, 0);}
+}
+
+.typing {
+    margin: auto !important;
+}
+
+.navbar {
+    display: flex !important;
+    flex: row !important;
+    justify-content: space-around !important;
+    background-color: black !important;
+    width: 100% !important;
+    
+    
+}
+
+.scrolling {
+margin-top: 100px;
+}
+
+#scroll-container {
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    margin-bottom: 0;
+    color: red;
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+
+}
+
+
+
+@media (max-width: 499px) {
+    iframe {
+        display: none;
+    }
+
+    .jumbotron {
+        margin-top: 30px;
+    }
+}
