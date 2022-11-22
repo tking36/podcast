@@ -211,6 +211,26 @@ module.exports = [
         hosts: 'Josh Clark',
         date: '2008-04-17',
         preview: 'https://open.spotify.com/embed/show/0ofXAdFIQQRsCYj9754UFx?utm_source=generator'
+    },
+    {
+        name: 'Serial Killers',
+        img: 'https://i.scdn.co/image/ab6765630000ba8a17ead1974c7c7f79e5b769ba',
+        description: `Get a rare glimpse into the minds and methods of sadistic murderers. From notorious names like Jeffrey Dahmer and John Wayne Gacy to lesser-known killers like “Death House Landlady” Dorothea Puente, what turns a regular person into a predator? Serial Killers is a Spotify Original from Parcast. New episodes Mondays and Thursdays.`,
+        genre: 'True Cime',
+        hosts: 'Gred Polcyn',
+        date: '2017-02-19',
+        preview: 'https://open.spotify.com/embed/show/4ruq7mH0jg1sFi8KQhnGb8?utm_source=generator'
+    },
+    {
+        name: 'Court TV Podcast',
+        img: 'https://image.simplecastcdn.com/images/bae51025-8107-430a-92f5-64b442564498/19523ff0-9aa1-45fb-905c-c7dbc5dc032b/3000x3000/image.jpg?aid=rss_feed',
+        description: `Every week, join Vinnie Politan for the all-new Court TV Podcast.
+        He'll dive into the real-life deceptions, betrayals and murders that lead to justice in the courtroom.
+        If you love geeking-out on trials and crime, you’ve landed on the perfect spot.`,
+        genre: 'True Cime',
+        hosts: 'Vinnie Politan',
+        date: '2019-08-29',
+        preview: 'https://open.spotify.com/embed/show/4FNV4Q17ZcixQ3OTgvR2fP?utm_source=generator'
     }
 
 

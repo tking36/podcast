@@ -42,11 +42,20 @@ app.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
+app.get('/comedy', (req, res) => {
+    Schema.find({}, (error, allPodcasts) => {
+      res.render('index.ejs', { data: allPodcasts })
+    })
+  })
+
+
 app.get('/:id', (req, res) => {
   Schema.findById(req.params.id, (error, podcast) => {
     res.render('show.ejs', { data: podcast })
   })
 })
+
+
 //Receving added task
 app.post('/', (req, res) => {
   Schema.create(req.body, (error, createdPodcast) => {
@@ -72,6 +81,7 @@ app.delete('/:id', (req, res) => {
     res.redirect('/')
   })
 })
+
 
 
 

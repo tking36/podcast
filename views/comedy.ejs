@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="show">
+        <div class="d-flex flex-row justify-content-around align-self-stretch flex-wrap" >
+        <% for (let i = 0; i < data.length; i++) {%>
+            <% if (data[i].genre == "Comedy") {%>
+        <div class="card bg-white"  style="width: 18rem;">
+            <img src="<%=data[i].img%>" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title b"><%=data[i].name%></h5>
+              <p class="card-text b">Genre: <%=data[i].genre%></p>
+              <a href="./<%=data[i].id%>" class="btn btn-dark">More Info</a>
+            </div>
+          </div>
+            <%}%>
+          <% } %>
+        </div>
+        </div>  
+</body>
+</html>
