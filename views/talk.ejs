@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('../partials/head.ejs') %>
+</head>
+<body class="container-fluid bg-image homewall" style=" background-image: url('https://api.time.com/wp-content/uploads/2014/05/wallpaperfx.jpg'); background-size: contain;">
+
+    <%- include('../partials/nav.ejs') %>
+    
+    <div class="slider">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <div>
+                <% for (let i = 0; i < data.length; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <% } %>
+            </div>  
+        </marquee>
+    </div>
+  
+    <div class="show">
+    <div class="d-flex flex-row justify-content-around align-self-stretch flex-wrap" >
+    <% for (let i = 0; i < data.length; i++) {%>
+        <% if (data[i].genre == "Talk") {%>
+    <div class="card bg-white"  style="width: 18rem;">
+        <img src="<%=data[i].img%>" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title b"><%=data[i].name%></h5>
+          <p class="card-text b">Genre: <%=data[i].genre%></p>
+          <a href="./<%=data[i].id%>" class="btn btn-dark">More Info</a>
+        </div>
+      </div>
+         <% } %>
+      <% } %>
+    </div>
+    </div>  

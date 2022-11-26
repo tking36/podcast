@@ -32,23 +32,54 @@ const Schema = require('./models/schema.js')
 
 // Schema.collection.drop()
 
+//Home Page
 app.get('/', (req, res) => {
   Schema.find({}, (error, allPodcasts) => {
     res.render('index.ejs', { data: allPodcasts })
   })
 })
 
+//New Page
 app.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
+//Comedy Page
 app.get('/comedy', (req, res) => {
     Schema.find({}, (error, allPodcasts) => {
-      res.render('index.ejs', { data: allPodcasts })
+      res.render('comedy.ejs', { data: allPodcasts })
     })
   })
 
+  //History Page
+  app.get('/history', (req, res) => {
+    Schema.find({}, (error, allPodcasts) => {
+      res.render('history.ejs', { data: allPodcasts })
+    })
+  })
 
+  //Reality Page
+  app.get('/reality', (req, res) => {
+    Schema.find({}, (error, allPodcasts) => {
+      res.render('reality.ejs', { data: allPodcasts })
+    })
+  })
+
+  //Talk Page
+  app.get('/talk', (req, res) => {
+    Schema.find({}, (error, allPodcasts) => {
+      res.render('talk.ejs', { data: allPodcasts })
+    })
+  })
+
+  //TrueCrime Page
+  app.get('/truecrime', (req, res) => {
+    Schema.find({}, (error, allPodcasts) => {
+      res.render('truecrime.ejs', { data: allPodcasts })
+    })
+  })
+
+//Show Page
 app.get('/:id', (req, res) => {
   Schema.findById(req.params.id, (error, podcast) => {
     res.render('show.ejs', { data: podcast })
@@ -64,18 +95,21 @@ app.post('/', (req, res) => {
   })
 })
 
+//Edit Page
 app.get('/:id/edit', (req, res) => {
   Schema.findById(req.params.id, (error, podcast) => {
     res.render('edit.ejs', { data: podcast })
   })
 })
 
+//Edit
 app.put('/:id', (req, res) => {
   Schema.findOneAndUpdate(req.params.id, req.body, { new: true }, (error, podcast) => {
     res.render('show.ejs', { data: podcast })
   })
 })
 
+//Delete
 app.delete('/:id', (req, res) => {
   Schema.findByIdAndRemove(req.params.id, { new: true }, (error, podcast) => {
     res.redirect('/')
@@ -85,5 +119,4 @@ app.delete('/:id', (req, res) => {
 
 
 
-/////////////////////JQUERY/////////////////
 

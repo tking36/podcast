@@ -3,29 +3,20 @@
 <head>
 <%- include('../partials/head.ejs') %>
 </head>
-<body class="container-fluid bg-dark ">
+<body class="container-fluid bg-image homewall" style=" background-image: url('https://api.time.com/wp-content/uploads/2014/05/wallpaperfx.jpg'); background-size: contain;">
 
+    
     <%- include('../partials/nav.ejs') %>
-    
+    <div class="marqueeback"></div>
+
+    <div class="slider">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <div class="slidertext">
+                 <% for (let i = 0; i < data.length; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <% } %>
+            </div>  
+        </marquee>
+    </div>
    
-
-    
-
-    
-
-   <div class="slider">
-   <marquee behavior="scroll" direction="left" scrollamount="10">
-   
-    <div>
-        <% for (let i = 0; i < data.length; i++) {%> <%=data[i].name%> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <% } %>
-    </div>  
-    
-   </marquee>
-</div>
-  
-   
-
-
     <div class="show">
     <div class="d-flex flex-row justify-content-around align-self-stretch flex-wrap" >
     <% for (let i = 0; i < data.length; i++) {%>
@@ -40,6 +31,7 @@
       <% } %>
     </div>
     </div>  
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
