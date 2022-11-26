@@ -23,15 +23,30 @@ body {
 /* Show Page Cards */
 .showing {
     color: white;
-    background-position-x:right ;
-    background-attachment: fixed;
+    background-size: contain;
+    /* background-position-x:right ; */
+    /* background-attachment: fixed; */
 }
 
+
+.jumbotron {
+    margin-top: 30px;
+}
+
+/* Button Padding  */
+.btn-warning {
+    margin-right: 10px;
+}
+
+.delete {
+    margin-left: 10px;
+}
 
 /* Home Wallpaper */
 .homewall {
     background-attachment: fixed;
     background-position-y: 80%;
+    background-repeat: none;
     
 }
 
@@ -42,8 +57,20 @@ body {
 
 /* Show Page Card Text */
 .b {
-    background-color: red;
+    background-color: rgb(0, 0, 0);
+    color: red;
     padding: 5px;
+}
+
+.showinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show-description {
+max-width: 40%;
 }
 
 /* Nav Title Typing Text */
@@ -178,10 +205,27 @@ body {
   /* Media Query  */
 @media (max-width: 499px) {
     iframe {
-        display: none;
+        width: 90%;
     }
 
     .jumbotron {
-        margin-top: 30px;
+        margin-top: 100px;
     }
+}
+
+@media (max-width: 650px) {
+   
+
+    .show-description {
+        max-width: 70%;
+    }
+ }
+
+
+@media (max-width: 800px) {
+   .showinfo {
+    display: flex;
+    flex-direction: column;
+
+   }
 }

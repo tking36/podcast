@@ -13,9 +13,13 @@
         <h1 class="display-4"><%=data.name%></h1>
         <p class="lead">Genre: <%=data.genre%> <br> Hosts: <%=data.hosts%> <br> Release Date: <%=data.date%></p>
         <hr class="my-4">
-        <h3>Description:</h3> <br><p><%=data.description%></p> 
-        <iframe style="border-radius:12px" src="<%=data.preview%>" width="496" height="279" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <div class="d-flex flex-row justify-content-around">
+        <div class="showinfo">
+            <div class="show-description">
+                <h3>Description:</h3> <br><p><%=data.description%></p> 
+            </div>
+            <iframe style="border-radius:12px" src="<%=data.preview%>" width="496" height="279" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
          <a class="btn btn-warning" href="/<%=data.id%>/edit">Edit </a> 
 
         <form action="/<%=data.id%>?_method=DELETE" method="POST">
@@ -23,6 +27,7 @@
         </div>
       </div>  
       </div>
+      <%- include('../partials/footer.ejs') %>
 </body>
 </html>
 
