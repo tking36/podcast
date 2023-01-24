@@ -5,7 +5,7 @@ const mongoURI = 'mongodb://localhost:27017/'
 const db = mongoose.connection
 const app = express()
 app.use(express.static('public'))
-mongoose.connect(process.env.MONGODB_URI, () => {
+mongoose.connect(mongoURI, () => {
   console.log('The connection with mongod is established')
 })
 
