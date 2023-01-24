@@ -186,6 +186,12 @@ max-width: 40%;
     text-decoration: none;
     display: block;
   }
+
+  .footer {
+    position: relative; 
+    left: 0;
+    bottom: 0;
+  }
   
   
   .dropdown-content a:hover {background-color: #ddd;}
