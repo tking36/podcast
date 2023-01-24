@@ -8,6 +8,8 @@ app.use(express.static('public'))
 mongoose.connect(process.env.MONGODB_URI, () => {
   console.log('The connection with mongod is established')
 })
+
+
 // links the connection to the host
 app.listen(process.env.PORT, () => {
   console.log('listening')
