@@ -5,11 +5,11 @@ const mongoURI = 'mongodb://localhost:27017/'
 const db = mongoose.connection
 const app = express()
 app.use(express.static('public'))
-mongoose.connect('mongodb://localhost:27017/podcast', () => {
+mongoose.connect(process.env.MONGODB_URI, () => {
   console.log('The connection with mongod is established')
 })
 // links the connection to the host
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log('listening')
 })
 
