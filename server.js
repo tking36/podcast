@@ -3,15 +3,16 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const mongoURI = 'mongodb://localhost:27017/'
 const db = mongoose.connection
+require('dotenv').config()
 const app = express()
 app.use(express.static('public'))
-mongoose.connect(mongoURI, () => {
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose.connect('mongodb://localhost:27017/podcast', () => {
   console.log('The connection with mongod is established')
 })
 
-
 // links the connection to the host
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
   console.log('listening')
 })
 
