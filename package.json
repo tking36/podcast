@@ -14,6 +14,9 @@
   "name": "podcast",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "10.11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tking36/podcast.git"
@@ -25,4 +28,6 @@
   },
   "homepage": "https://github.com/tking36/podcast#readme",
   "description": ""
+
+  
 }
