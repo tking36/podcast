@@ -3,43 +3,21 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const mongoURI = 'mongodb://localhost:27017/'
 const db = mongoose.connection
-require('dotenv').config()
 const app = express()
-
-const PORT = process.env.PORT || 3000
-
-const MONGODB_URI = process.env.MONGODB_URI;
-
-// mongoose.connect('mongodb://localhost:27017/podcast', () => {
-  //   console.log('The connection with mongod is established')
-  // })
-  
-  mongoose.connect(MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true }
-    );
-    
-    db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-    db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
-    db.on('disconnected', () => console.log('mongo disconnected'));
-    
-    app.use(express.static('public'))
-
-    app.use(express.urlencoded({ extended: false }))
-    app.use(express.json())
-
-    app.use(methodOverride('_method'))
-
+app.use(express.static('public'))
+mongoose.connect('mongodb://localhost:27017/podcast', () => {
+  console.log('The connection with mongod is established')
+})
 // links the connection to the host
 app.listen(3000, () => {
   console.log('listening')
 })
-
-
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 // Importing schema and data
 const Data = require('./models/data.js')
 const Schema = require('./models/schema.js')
-
 // Saving data into db
-
 // Schema.create(Data, (err, data) => {
 //   if (err) {
 //     console.log(err.message)
@@ -133,8 +111,3 @@ app.delete('/:id', (req, res) => {
     res.redirect('/')
   })
 })
-
-
-
-
-
